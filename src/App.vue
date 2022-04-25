@@ -176,8 +176,9 @@ const NextQuestion = () => {
                 <section class="section">
                   <h3 class="H2_delen">Voordelen</h3>
                   <ul class="list">
-                    <li class="listitem">React heeft een groter gemeenschap dan Vue. Er is hierdoor veel documentatie en kant-en-klare oplossingen beschikbaar. </li>
-                    <li class="listitem">React is geschikter voor grotere applicaties omdat het over een breeder ecosysteem beschikt.</li>
+                    <li class="listitem"><b>Beschikbaarheid</b><br>React heeft een groter gemeenschap en ecosysteem dan Vue. Er is veel documentatie en kant-en-klare oplossingen beschikbaar. Hierdoor  is React geschikter voor grotere applicaties.</li>
+                    <li class="listitem"><b>Efficiëntie</b><br>React is het meest efficiënt bij groter applicaties, mede door de kant-en klare oplossingen, maar ook door het brede ecosysteem wat ze hebben.</li>
+                    <li class="listitem"><b>Snelheid</b><br>React is erg snel, dit komt omdat React met een Virtuele DOM werkt. Vue is net iets sneller dan React, echter is het verschil in snelheid zo klein dat een eindgebruiker dit niet merkt.</li>
                   </ul>
                 </section>
               </div>
@@ -185,6 +186,7 @@ const NextQuestion = () => {
                 <section class="section">
                   <h3 class="H2_delen">Nadelen</h3>
                   <ul class="list">
+                    <li class="listitem"><b>Gebruiksgemak</b><br>React is lastiger te leren dan Vue, maar indien een project een lange ontwikkelingstijd heeft en de applicatie is medium/erg complex is React wel geschikter dan Vue in verband met het ecoysteem van React.</li>
                     <li class="listitem">React heeft een groter gemeenschap dan Vue. Er is hierdoor veel documentatie en kant-en-klare oplossingen beschikbaar. </li>
                     <li class="listitem">De documentatie is slecht gestructureerd. </li>
                   </ul>
@@ -213,8 +215,10 @@ const NextQuestion = () => {
                 <section class="section">
                   <h3 class="H2_delen">Voordelen</h3>
                   <ul class="list">
-                    <li class="listitem">Vue heeft een minder stijle leercurve, en is daardoor makkelijker te leren.  </li>
+                    <li class="listitem"><b>Gebruiksgemak</b><br>Vue heeft een minder stijle leercurve, en is daardoor makkelijker te leren.  </li>
+                    <li><b>Efficiëntie</b><br>Vue is het meest efficiënt bij kleinschalige applicatiess, die snel opgeleverd moeten worden. Dit in verband met de minder stijle leercurve.</li>
                     <li class="listitem">De documentatie van Vue is erg gestructureerd.</li>
+                    <li><b>Snelheid</b><br>Vue is erg snel, dit komt omdat Vue met een Virtuele DOM werkt. Vue is net iets sneller dan React, echter is het verschil in snelheid zo klein dat een eindgebruiker dit niet merkt.</li>
                   </ul>
                 </section>
               </div>
@@ -222,7 +226,7 @@ const NextQuestion = () => {
                 <section class="section">
                   <h3 class="H2_delen">Nadelen</h3>
                   <ul class="list">
-                    <li class="listitem">Vue heeft een kleiner ecosyteem dan React, er zijn hierdoor minder kant-en-klare oplossingen beschikbaar. </li>
+                    <li class="listitem"><b>Beschikbaarheid</b><br>Vue heeft een kleiner ecosyteem dan React, er zijn hierdoor minder kant-en-klare oplossingen beschikbaar. </li>
                     <li class="listitem">Vue is heel flexibel, maar het gevaar hiervan is dat het kan leiden tot spaghetti code.</li>
                   </ul>
                 </section>
@@ -284,6 +288,7 @@ p {
 	padding: 1rem;
 	/* padding: 2rem; */
 	min-height: 100vh;
+  max-height: 200vh;
 
   background-color: #F6DDF2;
 }
@@ -465,7 +470,7 @@ li{
   }
   .app{
     padding: 1.5rem;
-    height: 100vh;
+
   }
   .style__H2{
     font-size: 28px;
@@ -508,6 +513,7 @@ li{
 .box{
   height: 100%;
 }
+
 }
 
 </style>

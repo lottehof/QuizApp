@@ -288,7 +288,7 @@ p {
 	padding: 1rem;
 	/* padding: 2rem; */
 	min-height: 100vh;
-  max-height: 200vh;
+  /* max-height: 200vh; */
 
   background-color: #F6DDF2;
 }

@@ -4,12 +4,13 @@ const questions = ref([
   {
 	question: 'Wat voor frontend developer bent u?',
   answer: 0,
+  id: "1",
   answerVue: 1,
 	options: [
 		'Geen',
-		'Junior',
-		'Medior',
-    'Senior'
+		'Junior (0 - 2 jaar ervaring)',
+		'Medior (3 - 5 jaar ervaring)',
+    'Senior (> 5 jaar ervaring)'
 
 	],
 	selected: null
@@ -17,6 +18,7 @@ const questions = ref([
   {
 	question: 'Wat is uw ervaring met React?',
 	answer: 0,
+  id: "2",
   answerVue: 1,
 	options: [
 		'Geen',
@@ -29,6 +31,7 @@ const questions = ref([
   {
 	question: 'Wat is uw ervaring met Vue?',
   answer: 2,
+  id: "3",
   answerVue: 3,
 	options: [
 		'Geen',
@@ -39,24 +42,38 @@ const questions = ref([
 	selected: null
   },
   {
-	question: 'Hoe lang is de ontwikkelingstijd?',
+	question: 'Hoe lang heeft u de tijd voor het ontwikkelen van de applicatie?',
   answer: 0,
   answerVue: 0,
+  id: "4",
 	options: [
-		'< 2 maand',
+		'< 2 maanden',
 		'3 - 4 maanden',
     '> 5 maanden'
 	],
 	selected: null
 },
 {
-question: 'Hoe complex is de applicatie',
+question: 'Hoe complex is de applicatie?',
 answer: 0,
-answerVue: 0,
+id: "5",
+answerVue:1,
 options: [
   'Simpel',
   'Medium',
+  'Complex',
   'Erg complex',
+],
+selected: null
+},
+{
+question: 'Bevat de applicatie veel animaties?',
+answer: 0,
+id: "6",
+answerVue: 0,
+options: [
+  'Ja',
+  'Nee',
 ],
 selected: null
 }
@@ -116,8 +133,9 @@ const NextQuestion = () => {
   		<section class="quiz" >
   			<div class="quiz-info">
   				<span class="question">{{ getCurrentQuestion.question }}</span>
-  			</div>
 
+  			</div>
+        <span class="score">Vraag {{ getCurrentQuestion.id}}/{{ questions.length }}</span>
   			<div class="options">
   				<label
   					v-for="(option, index) in getCurrentQuestion.options"
@@ -215,7 +233,7 @@ const NextQuestion = () => {
                 <section class="section">
                   <h3 class="H2_delen">Voordelen</h3>
                   <ul class="list">
-                    <li class="listitem"><b>Gebruiksgemak</b><br>Vue heeft een minder stijle leercurve, en is daardoor makkelijker te leren.  </li>
+                    <li class="listitem"><b>Gebruiksgemak</b><br>Vue heeft een minder stijle leercurve, en is daardoor makkelijker te leren.   Daarnaast is Vue erg handig om te gebruiken als er veel animaties in de applicatie voorkomen.</li>
                     <li><b>Efficiëntie</b><br>Vue is het meest efficiënt bij kleinschalige applicatiess, die snel opgeleverd moeten worden. Dit in verband met de minder stijle leercurve.</li>
                     <li class="listitem">De documentatie van Vue is erg gestructureerd.</li>
                     <li><b>Snelheid</b><br>Vue is erg snel, dit komt omdat Vue met een Virtuele DOM werkt. Vue is net iets sneller dan React, echter is het verschil in snelheid zo klein dat een eindgebruiker dit niet merkt.</li>
@@ -379,6 +397,13 @@ button {
 }
 button:disabled {
 	opacity: 0.5;
+}
+.score{
+  /* float: right; */
+  text-align: right;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
 .medal-image{
   width: 50px;
